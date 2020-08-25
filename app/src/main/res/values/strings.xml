@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HorizontalPicker</string>
+    <string name="pickerToast">Selected value : %s</string>
 </resources>
