@@ -16,4 +16,5 @@ class PickerVH(itemView: View, itemClickedAction: (position: Int) -> Unit) :
     fun bind(item: String) = with(itemView) {
         picker_item.text = item
     }
+
 }

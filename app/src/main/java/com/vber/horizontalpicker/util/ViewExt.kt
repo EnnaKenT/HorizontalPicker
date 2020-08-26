@@ -1,9 +1,16 @@
 package com.vber.horizontalpicker.util
 
-import android.content.Context
-import android.widget.Toast
-import androidx.annotation.StringRes
+import android.graphics.LinearGradient
+import android.graphics.Shader
+import android.widget.TextView
+import com.vber.horizontalpicker.R
 
-fun Context.showToast(@StringRes textRes: Int) = showToast(getString(textRes))
-fun Context.showToast(text: CharSequence) = showToast(text.toString())
-fun Context.showToast(text: String) = Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+fun TextView.initGradientColor() {
+    val textShader: Shader = LinearGradient(
+        0F, 0F, width.toFloat(), 0F, intArrayOf(
+            context.getColor(R.color.colorCircleProgressGradientStart),
+            context.getColor(R.color.colorCircleProgressGradientEnd)
+        ), null, Shader.TileMode.MIRROR
+    )
+    paint.shader = textShader
+}

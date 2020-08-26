@@ -22,10 +22,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private fun initViews() {
-        val pickerLayoutManager =
-            PickerLayoutManager(this, onScrollStopListener = ::pickerLayoutScrollStopped)
+        val manager = PickerLayoutManager(this, onScrollStopListener = ::pickerLayoutScrollStopped)
         with(rv) {
-            layoutManager = pickerLayoutManager
+            layoutManager = manager
             adapter = this@MainActivity.adapter
         }
     }

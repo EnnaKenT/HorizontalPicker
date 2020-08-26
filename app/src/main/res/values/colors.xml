@@ -3,4 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorTextRecyclerStartEnd">#ABBAC8</color>
+    <color name="colorTextRecyclerCenter">#1AB5F4</color>
+
+    <color name="colorCircleProgressGradientStart">#1AB5F4</color>
+    <color name="colorCircleProgressGradientEnd">#5876EA</color>
 </resources>

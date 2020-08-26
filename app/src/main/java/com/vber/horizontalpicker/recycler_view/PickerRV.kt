@@ -10,6 +10,7 @@ class PickerRV @JvmOverloads constructor(
 ) : RecyclerView(context, attrs, defStyleAttr) {
 
     init {
+        //for fixed step selection
         LinearSnapHelper().apply { attachToRecyclerView(this@PickerRV) }
     }
 }
