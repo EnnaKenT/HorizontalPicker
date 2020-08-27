@@ -15,12 +15,10 @@ class PickerRV @JvmOverloads constructor(
         clipToPadding = false
         //for fixed step selection
         LinearSnapHelper().apply { attachToRecyclerView(this@PickerRV) }
-        doOnLayout {
-            setDynamicPadding()
-        }
+        doOnLayout { widthReceived() }
     }
 
-    private fun setDynamicPadding() {
+    private fun widthReceived() {
         updatePadding(left = width / 2, right = width / 2)
         smoothScrollToPosition(0)
     }
