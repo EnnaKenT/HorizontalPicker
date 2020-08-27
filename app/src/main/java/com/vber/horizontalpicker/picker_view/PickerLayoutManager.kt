@@ -1,4 +1,4 @@
-package com.vber.horizontalpicker.recycler_view
+package com.vber.horizontalpicker.picker_view
 
 import android.content.Context
 import android.view.View

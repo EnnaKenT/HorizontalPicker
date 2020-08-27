@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.vber.horizontalpicker.adapter.PickerAdapter
-import com.vber.horizontalpicker.recycler_view.PickerLayoutManager
+import com.vber.horizontalpicker.picker_view.PickerAdapter
+import com.vber.horizontalpicker.picker_view.PickerLayoutManager
 import com.vber.horizontalpicker.util.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 

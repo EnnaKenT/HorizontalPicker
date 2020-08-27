@@ -1,4 +1,4 @@
-package com.vber.horizontalpicker.adapter
+package com.vber.horizontalpicker.picker_view
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +11,8 @@ class PickerAdapter(private val itemClickedAction: (position: Int) -> Unit) :
     private var dataList: List<String>? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PickerVH {
-        val view = parent.inflate(R.layout.picker_item_layout)
-        return PickerVH(view, itemClickedAction)
+        val itemView = parent.inflate(R.layout.picker_item_layout)
+        return PickerVH(itemView, itemClickedAction)
     }
 
     override fun onBindViewHolder(holder: PickerVH, position: Int) =
@@ -24,5 +24,7 @@ class PickerAdapter(private val itemClickedAction: (position: Int) -> Unit) :
         dataList = newData
         notifyDataSetChanged()
     }
+
+    fun getItems() = dataList
 
 }

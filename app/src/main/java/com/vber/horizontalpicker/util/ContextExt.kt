@@ -17,4 +17,6 @@ fun Context.showToast(text: String) = Toast.makeText(this, text, Toast.LENGTH_SH
 fun Context.getCompatColor(@ColorRes colorRes: Int) = ContextCompat.getColor(this, colorRes)
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false): View =
-    LayoutInflater.from(this.context).inflate(layoutRes, this, attachToRoot)
+    this.context.inflate().inflate(layoutRes, this, attachToRoot)
+
+fun Context.inflate(): LayoutInflater = LayoutInflater.from(this)
